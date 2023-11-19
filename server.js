@@ -10,6 +10,9 @@ const app = express();
 
 app.use(express.json());
 
+// Serve static files from the 'public' directory
+app.use(express.static("public"));
+
 // Add up the total health of all the robots
 const calculateTotalHealth = (robots) =>
   robots.reduce((total, { health }) => total + health, 0);
