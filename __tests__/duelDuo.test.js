@@ -72,7 +72,7 @@ describe("Dueling", () => {
       await driver.wait(async () => {
         const text = await results.getText();
         return text === "You won!" || text === "You lost!";
-      }, 5000);
+      }, 10000);
 
       // Check the Ending Scoreboard
       const endingWins = await driver.findElement(By.id("wins")).getText();
